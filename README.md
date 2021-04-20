@@ -1,4 +1,4 @@
-# Supergrain Supergrain
+# Supergrain
 
 ## How do I install these formulae?
 
