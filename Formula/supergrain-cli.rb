@@ -176,9 +176,7 @@ class SupergrainCli < Formula
           venv.pip_install r
         end
       end
-    end
 
-    unless build.without?("snowflake-connector")
       (libexec/"bin").install "propel" => "sg"
       (bin/"sg").write(
         "#! env sh
