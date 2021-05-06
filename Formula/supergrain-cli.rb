@@ -3,7 +3,7 @@ class SupergrainCli < Formula
 
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
-  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel.0-10-32.tar.gz"
+  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel-cli-v0.10.32.tar.gz"
   sha256 "a1ac43580b63ab62ffe055d58f2ccf57d4ea3e20cf0b5bfa8dfebc02388e8fdc"
   license "ISC"
   revision 1
@@ -13,7 +13,6 @@ class SupergrainCli < Formula
 
   depends_on "python@3.8" unless build.without? "snowflake-connector"
   depends_on "fishtown-analytics/dbt/dbt" => ["0.19.1", :recommended]
-
 
   unless build.without?("snowflake-connector")
     resource "asn1crypto" do
@@ -158,7 +157,9 @@ class SupergrainCli < Formula
   end
 
   def install
-    unless build.without?("snowflake-connector")
+    if build.without?("snowflake-connector")
+      bin.install "propel" => "sg"
+    else
       venv = virtualenv_create(libexec, "python3")
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/pip", "install",
         "--upgrade", "pip"
@@ -181,10 +182,8 @@ class SupergrainCli < Formula
       (bin/"sg").write(
         "#! env sh
         source #{venv.instance_variable_get(:@venv_root)}/bin/activate
-        #{libexec}/bin/sg"
+        #{libexec}/bin/sg",
       )
-    else
-      bin.install "propel" => "sg"
     end
   end
 end
