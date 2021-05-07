@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# this script ensures that the current formula has an associated "versioned" formula.
+# it is meant to be used for pull requests that automatically update the formula
+# to a new version and is ultimately meant to enable users to do:
+#   brew install formula@some-version
+
 set -euo pipefail
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -14,11 +19,6 @@ else
   echo "This script requires sed, no sed found."
   exit 1
 fi
-
-# this script ensures that the current formula has an associated "versioned" formula.
-# it is meant to be used for pull requests that automatically update the formula
-# to a new version and is ultimately meant to enable users to do:
-#   brew install formula@some-version
 
 function current_version {
   formula_name="${1}"
