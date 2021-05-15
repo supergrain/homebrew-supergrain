@@ -4,7 +4,9 @@ class SupergrainCliDevelopment < Formula
   desc "Supergrain CLI – development version"
   homepage "http://supergrain.com"
   url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel-cli-development.tar.gz"
+  sha256 "0e272d068c716085109992735b651f2802c355cad9febc2c277f9ee0c3255249"
   license "ISC"
+  version "0.10"
 
   conflicts_with "supergrain-cli", because: "you can either install supergrain-cli or supergrain-cli-development, but not both"
 
@@ -182,7 +184,7 @@ class SupergrainCliDevelopment < Formula
       (bin/"sg").write(
         "#! env sh
         source #{venv.instance_variable_get(:@venv_root)}/bin/activate
-        #{libexec}/bin/sg",
+        #{libexec}/bin/sg $@",
       )
     end
   end
