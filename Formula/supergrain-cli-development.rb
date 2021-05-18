@@ -1,13 +1,14 @@
-class SupergrainCliAT01033 < Formula
+class SupergrainCliDevelopment < Formula
   include Language::Python::Virtualenv
 
-  desc "Supergrain CLI"
+  desc "Supergrain CLI – development version"
   homepage "http://supergrain.com"
-  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel-cli-v0.10.33.tar.gz"
+  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel-cli-development.tar.gz"
   sha256 "0e272d068c716085109992735b651f2802c355cad9febc2c277f9ee0c3255249"
   license "ISC"
-  revision 1
+  version "0.10"
 
+  conflicts_with "supergrain-cli", because: "you can either install supergrain-cli or supergrain-cli-development, but not both"
 
   option "without-snowflake-connector", "Don't install snowflake-connector"
   option "without-dbt", "Don't install dbt"

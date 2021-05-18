@@ -181,7 +181,7 @@ class SupergrainCli < Formula
       (bin/"sg").write(
         "#! env sh
         source #{venv.instance_variable_get(:@venv_root)}/bin/activate
-        #{libexec}/bin/sg",
+        #{libexec}/bin/sg $@",
       )
     end
   end
