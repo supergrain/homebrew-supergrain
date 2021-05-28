@@ -3,7 +3,7 @@ class SupergrainCliDevelopment < Formula
 
   desc "Supergrain CLI – development version"
   homepage "http://supergrain.com"
-  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/propel-cli-development.tar.gz"
+  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-development.tar.gz"
   sha256 "0e272d068c716085109992735b651f2802c355cad9febc2c277f9ee0c3255249"
   license "ISC"
   version "0.10"
