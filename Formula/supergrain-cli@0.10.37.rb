@@ -1,4 +1,4 @@
-class SupergrainCli < Formula
+class SupergrainCliAT01037 < Formula
   include Language::Python::Virtualenv
 
   desc "Supergrain CLI"
