@@ -6,6 +6,7 @@ class SupergrainCli < Formula
   url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.38.tar.gz"
   sha256 "59a596063fd8daad507d0f16b0c2fb49e170997cb2cd09f766dc00ddf830eaef"
   license "ISC"
+  release 1
 
   option "without-snowflake-connector", "Don't install snowflake-connector"
   option "without-dbt", "Don't install dbt"
@@ -157,7 +158,7 @@ class SupergrainCli < Formula
 
   def install
     if build.without?("snowflake-connector")
-      bin.install "propel" => "sg"
+      bin.install "sg" => "sg"
     else
       venv = virtualenv_create(libexec, "python3")
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/pip", "install",
