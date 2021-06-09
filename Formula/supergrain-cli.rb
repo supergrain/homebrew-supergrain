@@ -4,8 +4,9 @@ class SupergrainCli < Formula
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
   url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.37.tar.gz"
-  sha256 "e9af10cc33a12956a07d48ce1d544c39dbda687ccab88a7b7a5025b7864bf933"
+  sha256 "11c0c29f7e68025d9a5da4f4b04913229d905aae269fdc361153c81b60eca5cf"
   license "ISC"
+  revision 1
 
   option "without-snowflake-connector", "Don't install snowflake-connector"
   option "without-dbt", "Don't install dbt"
@@ -177,7 +178,7 @@ class SupergrainCli < Formula
         end
       end
 
-      (libexec/"bin").install "propel" => "sg"
+      (libexec/"bin").install "sg"
       (bin/"sg").write(
         "#! env sh
         source #{venv.instance_variable_get(:@venv_root)}/bin/activate
