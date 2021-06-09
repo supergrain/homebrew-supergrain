@@ -4,9 +4,9 @@ class SupergrainCli < Formula
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
   url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.37.tar.gz"
-  sha256 "11c0c29f7e68025d9a5da4f4b04913229d905aae269fdc361153c81b60eca5cf"
+  sha256 "e116e744ebc6effadc923e09e70a7d0109476adf4c57599af2d5adfe88af2b87"
   license "ISC"
-  revision 1
+  revision 2
 
   option "without-snowflake-connector", "Don't install snowflake-connector"
   option "without-dbt", "Don't install dbt"
