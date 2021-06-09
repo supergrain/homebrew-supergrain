@@ -158,7 +158,7 @@ class SupergrainCli < Formula
 
   def install
     if build.without?("snowflake-connector")
-      bin.install "sg" => "sg"
+      bin.install "sg"
     else
       venv = virtualenv_create(libexec, "python3")
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/pip", "install",
