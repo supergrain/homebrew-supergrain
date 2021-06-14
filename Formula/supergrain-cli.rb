@@ -2,8 +2,8 @@ class SupergrainCli < Formula
 
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
-  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.40.tar.gz"
-  sha256 "a06943f43db45b108b2f361a6f629cfa6d01778f09c1259e50633a829feb1997"
+  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.41.tar.gz"
+  sha256 "7f948cfb9096206516c8fa79517a8096656fb8cab2587519ae11a0d5bd64d29a"
   license "ISC"
 
   option "without-dbt", "Don't install dbt"
