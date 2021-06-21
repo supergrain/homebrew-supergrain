@@ -1,6 +1,8 @@
 name: Sync versioned formulas
 
-on: [pull_request]
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
   sync_versioned_formula:
@@ -17,5 +19,5 @@ jobs:
       - name: Commit any new formulas
         uses: EndBug/add-and-commit@v7
         with:
-          message: 'Sync versioned formula'
-          add: 'Formula/*.rb'
+          message: "Sync versioned formula"
+          add: "Formula/*.rb"
