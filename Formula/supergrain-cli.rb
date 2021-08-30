@@ -2,8 +2,8 @@ class SupergrainCli < Formula
 
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
-  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.73.tar.gz"
-  sha256 "85cea451eec057fa7e734548ca3ba6d779ed5836a3f9de14b8394575ef0d7d8e"
+  url "https://propel-cli.s3.us-east-2.amazonaws.com/builds/sg-cli-v0.10.75.tar.gz"
+  sha256 "860d37b38ce4a29ab57d5c0e0392aa4ca038d33a6897a44f9ad8287ff0bb09ed"
   license "ISC"
 
   def install
