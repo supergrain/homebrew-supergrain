@@ -2,10 +2,9 @@ class SupergrainCli < Formula
 
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
-  url "https://cdn.supergrain.com/builds/sg-cli-v0.1.2.tar.gz"
-  sha256 "9a007508574586249137a7dca4b1fda1e43427ba0e368a40ec589dc795a20221"
+  url "https://cdn.supergrain.com/builds/sg-cli-v0.1.3.tar.gz"
+  sha256 "85cea451eec057fa7e734548ca3ba6d779ed5836a3f9de14b8394575ef0d7d8e"
   license "ISC"
-  revision 4
 
   def install
       bin.install "sg"
