@@ -1,4 +1,4 @@
-class SupergrainCli < Formula
+class SupergrainCliAT014 < Formula
 
   desc "Supergrain CLI"
   homepage "http://supergrain.com"
